@@ -21,6 +21,7 @@ export default class AccountCreator extends LightningElement {
         this.dispatchEvent(toastEvent);
         console.log('=====Contact is Created=====');
         console.log('recordId=='+this.recordId);
+        console.log('success====');
 
     }
 }
