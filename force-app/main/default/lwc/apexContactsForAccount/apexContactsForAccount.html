@@ -1,0 +1,17 @@
+<template>
+
+    <lightning-record-view-form
+                record-id="0012x000005IItKAAW"
+                object-api-name="Account">
+                <div class="slds-box slds-theme_default">
+                    <lightning-output-field field-name="Name">
+                    </lightning-output-field>
+                </div>
+        </lightning-record-view-form>
+    <!--Create a Record-->
+    <lightning-record-form
+        object-api-name={object}
+        fields={myFields}
+        onsuccess={handleAccountCreated}>
+    </lightning-record-form>
+</template>
