@@ -4,8 +4,7 @@ import getContactList from '@salesforce/apex/ContactController.getContacts';
 import getContacts from '@salesforce/apex/ContactController.getContactslist';
 
 export default class apexImperativeMethod extends LightningElement {
-    @api recordId
-    totalContacts;
+    @api recordId;
 
     //calling apex
     @wire(getContactList, {accId:'$recordId' })
