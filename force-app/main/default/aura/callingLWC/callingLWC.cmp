@@ -3,5 +3,4 @@
     
     <!--<lightning:card title="Aura Component" iconName="custom:custom2" />-->
     <c:callingAura recordId="{!v.recordId}"/>
-</aura:component>	
-
+</aura:component>
