@@ -9,17 +9,25 @@ export default class CallingAura extends LightningElement {
     @api recordId;
     
     @track details;
-    @track aName;
+    @track currenRecordId;
+
+    connectedCallback() {
+        this.currenRecordId = this.recordId;
+    }
 
     @wire(getRecord, { recordId: '$recordId', fields: FIELDS })
-    getdetails;
+    getdetails({data}){
+        this.details = data;
+        console.log("data===="+data);
+    }
 
-    getRecord(){
-        this.details = this.getdetails;
-        console.log('-----'+JSON.stringify(this.details.data.fields.Name.value));
+    @api
+    handleRecord(){
+        console.log("===handleRecord=====");
+        console.log("details====="+JSON.stringify(this.details.fields.Name.value));
         this.dispatchEvent(new ShowToastEvent({
             title: 'Success',
-            message: 'Hii '+this.details.data.fields.Name.value,
+            message: 'Hii '+this.details.fields.Name.value,
             variant: 'success',
         }),
         );
