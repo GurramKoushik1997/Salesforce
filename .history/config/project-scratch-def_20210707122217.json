@@ -1,0 +1,16 @@
+{
+  "orgName": "Dev company",
+  "edition": "Developer",
+  "features": ["EnableSetPasswordInApi"],
+  "orgPreferences": {
+    "enabled": ["PathAssistantsEnabled"],
+    },
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    }
+  }
+}

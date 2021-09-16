@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:lightningQuickAction" access="global">
+    <aura:attribute name="showInput" type="boolean" default="false" />
+    <lightning:card title="Aura Component" iconName="custom:custom40" />
+    <c:callingAura recordId="{!v.recordId}"/>
+</aura:component>

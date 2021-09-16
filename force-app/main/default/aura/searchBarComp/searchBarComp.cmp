@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler event="aura:waiting"      action="{!c.doWaiting}" />
+    <aura:handler event="aura:doneWaiting"  action="{!c.doneWaiting}" />
+	<aura:attribute name="volunteerList" type="List" />
+    <aura:attribute name="isSpinner" type="Boolean" />
+    <aura:if isTrue="{!v.isSpinner}">
+        <lightning:spinner variant="brand" size="medium"  />
+    </aura:if>
+    <div class="slds-form-element">
+    <label class="slds-form-element__label" for="select-01">Select Category</label>
+    	<div class="slds-form-element__control">
+            <div class="slds-select_container">
+                <ui:inputSelect aura:id="selCategory" class="slds-select" change="{!c.doSubmit}">
+                    <ui:inputSelectOption text="" label="--Please Select Category --" />
+                    <ui:inputSelectOption text="NORMAL-WEIGHT" />
+                    <ui:inputSelectOption text="UNDER-WEIGHT" />
+                    <ui:inputSelectOption text="OVER-WEIGHT" />
+            	</ui:inputSelect>
+            </div>
+        </div>
+    </div>
+</aura:component>
