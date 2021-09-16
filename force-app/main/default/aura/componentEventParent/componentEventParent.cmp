@@ -1,3 +1,0 @@
-<aura:component >
-    <c:componentEventChild grtEvt="{!c.doHandle}" />
-</aura:component>

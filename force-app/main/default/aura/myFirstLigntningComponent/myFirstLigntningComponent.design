@@ -1,4 +1,0 @@
-<design:component label="Hello World">
-    <design:attribute name="enterName" label="Provide the Name" />
-	
-</design:component>
