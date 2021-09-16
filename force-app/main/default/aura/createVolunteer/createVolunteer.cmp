@@ -1,0 +1,17 @@
+<aura:component controller="VolunteerCreateCon" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="volunteerName"   type="String" />
+    <aura:attribute name="volunteerHeight" type="Integer" />
+    <aura:attribute name="volunteerWeight" type="Integer" />
+    <aura:attribute name="volunteerMobile" type="String" />
+    <aura:attribute name="volunteerEmail"  type="String" />
+    
+    <aura:attribute name="volId" type="String" />
+    <ui:outputText value="{!v.volId}" />
+    <lightning:input type="text"   value="{!v.volunteerName}" label="Volunteer Name" />
+    <lightning:input type="Number" value="{!v.volunteerHeight}" label="Height" />
+    <lightning:input type="Number" value="{!v.volunteerWeight}" label="Weight" />
+    <lightning:input type="text"   value="{!v.volunteerMobile}" label="Mobile" />
+    <lightning:input type="text"   value="{!v.volunteerEmail}" label="Email"/>
+    <lightning:button label="Submit" onclick="{!c.doSubmit}" variant="brand"
+                      iconName="standard:search"/>
+</aura:component>

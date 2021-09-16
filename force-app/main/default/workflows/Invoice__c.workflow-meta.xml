@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_alert_to_Invoice_owner</fullName>
+        <description>Email alert to Invoice owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Training/Training1</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Mark_as_a_bilk_invoice</fullName>
+        <field>Bulk_Invoice__c</field>
+        <literalValue>1</literalValue>
+        <name>Mark as a bilk invoice</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>Bulk_invoice_details</fullName>
+        <apiVersion>48.0</apiVersion>
+        <endpointUrl>https://google.com</endpointUrl>
+        <fields>Bulk_Invoice__c</fields>
+        <fields>CreatedDate</fields>
+        <fields>Id</fields>
+        <fields>Invoice_Amount__c</fields>
+        <fields>invoice_reg__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>koushik@devcompany.com</integrationUser>
+        <name>Bulk invoice details</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Amount greater than 1000</fullName>
+        <actions>
+            <name>Email_alert_to_Invoice_owner</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Mark_as_a_bilk_invoice</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Bulk_invoice_details</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Invoice__c.Invoice_Amount__c</field>
+            <operation>greaterThan</operation>
+            <value>&quot;INR 1,000&quot;</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

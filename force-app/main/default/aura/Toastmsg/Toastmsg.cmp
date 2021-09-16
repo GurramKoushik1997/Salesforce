@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+   <aura:attribute name="showInput" type="boolean" default="false" />
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="cName" type="String" />
+    <aura:attribute name="simpleRecord" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>
+    <aura:attribute name="showCity" type="boolean" default="true" />
+    <aura:attribute name="Result" type="String" />
+    <aura:attribute name="show" type="boolean" default="true" />
+
+        <lightning:button  class="sideButton" variant="brand"
+                          label="Submit Button"
+                          onclick="{! c.getWheather }" />
+</aura:component>

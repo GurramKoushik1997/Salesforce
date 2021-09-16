@@ -1,0 +1,4 @@
+<apex:page >
+    <apex:outputText value="KIMS" style="font-size:24px; color:red;"></apex:outputText>
+
+</apex:page>

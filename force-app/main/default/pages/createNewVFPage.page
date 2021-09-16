@@ -1,0 +1,16 @@
+<apex:page >
+ <apex:slds />
+<apex:form >
+       <div class="slds-card" style="padding:2%">
+         <apex:outputLabel value="Enter Account Name"></apex:outputLabel>
+         <apex:inputText styleClass="slds-input"/>
+         <apex:outputLabel value="Enter Contact Name"></apex:outputLabel>
+         <apex:inputText styleClass="slds-input"/> <br/>  <br/>
+         <div class="slds-button slds-button-group">
+         <apex:commandButton styleClass="slds-button slds-button_success" value="Submit"/>
+         <apex:commandButton styleClass="slds-button slds-button_brand" value="Search"/>
+         <apex:commandButton styleClass="slds-button slds-button_destructive" value="Abort"/>
+         </div>
+      </div>
+  </apex:form>
+</apex:page>

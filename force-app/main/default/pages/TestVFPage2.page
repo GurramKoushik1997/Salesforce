@@ -1,0 +1,3 @@
+<apex:page >
+  <apex:outputText value="Hello {!$User.FirstName} {!$User.LastName}" style="font-size:45px; color:green;"></apex:outputText>
+</apex:page>

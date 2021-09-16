@@ -1,0 +1,4 @@
+<apex:page >
+    <apex:outputText value="Appolo1" style="font-size:24px; color:green;"></apex:outputText>
+
+</apex:page>

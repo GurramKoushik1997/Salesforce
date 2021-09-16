@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Invoice__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>invoice process</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Invoice_Amount__c</fieldNames>
+        <fieldNames>Invoice_Date__c</fieldNames>
+        <fieldNames>hospital__c</fieldNames>
+        <fieldNames>Hospital_Email__c</fieldNames>
+        <picklistValueName>Processing</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

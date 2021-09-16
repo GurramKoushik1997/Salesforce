@@ -1,0 +1,4 @@
+<apex:page >
+    <apex:outputText value="ChennaiHospital" style="font-size:24px; color:orange;"></apex:outputText>
+
+</apex:page>

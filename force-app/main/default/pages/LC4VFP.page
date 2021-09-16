@@ -1,0 +1,12 @@
+<apex:page >
+  <apex:includeLightning />
+  <div id="locatorOut" />
+  <script>
+  $Lightning.use("c:demoDependencyApp",function()
+  {  $Lightning.createComponent
+  ("c:myFirstLigntningComponent",{"enter name": "Enter Contact Name"},"locatorOut",function(){}
+  );
+  }
+  );
+  </script>
+</apex:page>

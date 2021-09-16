@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="healthTip" type="HealthTip__c" default="{'sobjectType':'HealthTip__c', 'Name':'Yoga Tip for Over-Weight', 'Category__c' : 'OVER-WEIGHT', 'Description__c' : 'Practice Sun-Prostrations regularly.\nDo not drink while eating. Drink after 45 mins of eating.\nThis will help for digestion.'}" />
+    <div style="width:30rem; margin:4px;">
+    <lightning:card title="{!v.healthTip.Name}" variant="narrow" iconName="standard:solution" >  <!-- footer="{!v.healthTip.Category__c}" footer="footer text" -->
+        <aura:set attribute="actions">
+            <lightning:button label="Share" variant="success" onclick="{!c.myAction}" iconName="utility:share"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            {!v.healthTip.Category__c}
+        </p>
+        <table width="100%">
+        	<tr>
+            	<td class="slds-p-horizontal_small" width="25%">
+                  Tip
+                </td>
+                
+                <td class="slds-p-horizontal_small" width="75%">
+                    {!v.healthTip.Description__c}
+                </td>
+            </tr>
+        </table>
+    </lightning:card>
+    </div>
+</aura:component>

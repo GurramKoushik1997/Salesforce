@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Country__c</fullName>
+    <externalId>false</externalId>
+    <label>Country</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>India</fullName>
+                <default>false</default>
+                <label>India</label>
+            </value>
+            <value>
+                <fullName>Netherlands</fullName>
+                <default>false</default>
+                <label>Netherlands</label>
+            </value>
+            <value>
+                <fullName>London</fullName>
+                <default>false</default>
+                <label>London</label>
+            </value>
+            <value>
+                <fullName>NewYork</fullName>
+                <default>false</default>
+                <label>NewYork</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

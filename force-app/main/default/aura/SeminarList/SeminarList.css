@@ -1,0 +1,11 @@
+.THIS {
+}
+
+.THIS.semStatusMsg
+{
+    background-color:magenta;
+    color:white;
+    padding:4px;
+    font-size:16px;
+    border-radius:14px;
+}

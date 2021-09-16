@@ -1,0 +1,52 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="seminar" 
+                    type="Seminar__c" 
+                    default="{
+								  'Name' 		: 	'Orientation on Over-Weight',
+                                  'Category__c' : 	'OVER-WEIGHT',
+                                  'Speaker__c' 	: 	'Dr Amy Wright',
+                                  'Venue__c' 	: 	'Auditorium-1',
+                                  'Day__c' 		: 	'Monday',
+                                  'Time__c' 	: 	'6pm'}" />
+    <div style="width:35rem; margin:4px;">
+    <lightning:card title="{!v.seminar.Name}" variant="narrow" iconName="standard:event" >  <!-- footer="{!v.healthTip.Category__c}" footer="footer text" -->
+        <aura:set attribute="actions">
+            <lightning:button label="Enroll" variant="brand" onclick="{!c.doEnroll}" iconName="action:log_event"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            {!v.seminar.Category__c}
+        </p>
+        <table width="100%">
+        	<tr>
+            	<td class="slds-p-horizontal_small" width="35%">
+                  Conducted by
+                </td>
+                
+                <td class="slds-p-horizontal_small" width="65%">
+                    {!v.seminar.Speaker__c}
+                </td>
+            </tr>
+            
+            <tr>
+            	<td class="slds-p-horizontal_small">
+                    <ui:outputText value="Day $ Timing" />
+                </td>
+                
+                <td class="slds-p-horizontal_small">
+                    {!v.seminar.Day__c + ' at '+ v.seminar.Time__c}
+                </td>
+            </tr>
+            
+            <tr>
+            	<td class="slds-p-horizontal_small">
+                  Venue
+                </td>
+                
+                <td class="slds-p-horizontal_small">
+                    {!v.seminar.Venue__c}
+                </td>
+            </tr>
+        </table>
+    </lightning:card>
+    </div>
+</aura:component>

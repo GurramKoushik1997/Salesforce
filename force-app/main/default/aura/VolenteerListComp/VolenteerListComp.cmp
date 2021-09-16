@@ -1,0 +1,29 @@
+<aura:component controller="volunteerSearchCon" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler event="aura:waiting" action="{!c.doWaiting}" />
+    <aura:handler event="aura:doneWaiting" action="{!c.doDoneWaiting}" />
+    <aura:attribute name="volunteerList" type="List" />
+    <aura:attribute name="isSpinner"
+                    type="Boolean" />
+    <aura:if isTrue="{!v.isSpinner}" >
+        <lightning:spinner variant="brand" size="medium" />
+    </aura:if>
+    
+    <div class="slds-form-element">
+    <label class="slds-form-element__label" for="select-01">Select Label</label>
+    	<div class="slds-form-element__control">
+            <div class="slds-select_container">
+                <ui:inputSelect class="slds-select" aura:id="selCategory" change="{!c.doSubmit}">
+                    <ui:inputSelectOption text=""  label="-- None Selected --" />
+                    <ui:inputSelectOption text="NORMAL-WEIGHT" />
+                    <ui:inputSelectOption text="UNDER-WEIGHT"  />
+                    <ui:inputSelectOption text="OVER-WEIGHT"   />
+            	</ui:inputSelect>
+            </div>
+        </div>
+    </div>
+    
+    <aura:iteration items="{!v.volunteerList}" var="volunteer">
+        <c:VolenteerTile vol="{!volunteer}" />
+    </aura:iteration>
+    
+</aura:component>
